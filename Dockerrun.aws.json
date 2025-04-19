@@ -1,0 +1,34 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "saurabh2210/portfolio-project:version1",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": 80
+    }
+  ],
+  "Environment": [
+    {
+      "Name": "DJANGO_SETTINGS_MODULE",
+      "Value": "portfolio_project.settings"
+    },
+    {
+      "Name": "DEBUG",
+      "Value": "False"
+    },
+    {
+      "Name": "SECRET_KEY",
+      "Value": "django-insecure-^@(q(677@)(r@j7vrt8q(*x2s^89y%fjc05ul4v&8d-4^62p0n"
+    },
+    {
+      "Name": "ALLOWED_HOSTS",
+      "Value": "*"
+    },
+    {
+    "Name": "SECURE_SSL_REDIRECT",
+    "Value": "False"
+  }
+  ]
+} 

@@ -1,0 +1,72 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Sourabh Pandey - Python, Database Developer and Cloud Engineer{% endblock %}
+
+{% block content %}
+<header class="flex flex-col sm:flex-row justify-between items-center mb-12 text-center sm:text-left">
+    <div class="flex items-center">
+        <div class="w-4 h-4 bg-teal-400 rounded-full mr-2"></div>
+        <div>
+            <h1 class="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">Sourabh Pandey</h1>
+            <p class="text-sm sm:text-base"><b>Cloud,Database & Network Engineer | Python Developer</b></p>
+        </div>
+    </div>
+</header>
+
+<main class="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-12 fade-in">
+    <img src="{% static 'myphoto/pandey-professional.jpg' %}" alt="Portrait of Sourabh Pandey"
+         class="rounded-full w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-72 lg:h-80 object-cover object-top mb-6 lg:mb-0">
+
+   <div class="text-center lg:text-left max-w-xl">
+    <h2 class="text-3xl font-bold mb-4">Sourabh Pandey</h2>
+    <h3 class="text-xl font-semibold mb-2">A Bit About Me</h3>
+
+    <p class="text-sm sm:text-base leading-relaxed mb-4">
+        I am a <b>Python & Cloud Solutions Engineer | Database Specialist</b> with a passion for building
+        <b>scalable cloud architectures</b> and optimizing <b>database performance</b>.
+    </p>
+
+    <p class="text-sm sm:text-base leading-relaxed mb-4">
+        <b>Networking & System Administration:</b> Skilled in <b>Subnetting, ACLs, TCP, UDP, ICMP, Syslog, DNS, NTP, Telnet, SSH, DHCP, PAT, NAT.</b>
+    </p>
+
+    <p class="text-sm sm:text-base leading-relaxed mb-4">
+        <b>Infrastructure & Security:</b> Hands-on with <b>Active Directory, Linux (Ubuntu), IAM, Security Groups, and CI/CD pipelines.</b>
+    </p>
+
+    <p class="text-sm sm:text-base leading-relaxed mb-4">
+        My expertise includes <b>Python development</b>, working with <b>Django, NumPy, and Pandas</b> for web apps and automation tools.
+        I specialize in <b>database design, performance tuning, and cloud-native solutions</b>.
+    </p>
+
+    <p class="text-sm sm:text-base leading-relaxed mb-6">
+        I explore emerging <b>cloud technologies, DevOps methodologies, and data engineering solutions</b> to create efficient, high-performing applications.
+    </p>
+
+        <!-- Navigation Buttons -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <a href="{% url 'resume' %}" class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-lime-300 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition">
+                    <span class="text-lg font-bold">Resume</span>
+                </div>
+            </a>
+            <a href="{% url 'project' %}" class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-orange-400 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition">
+                    <span class="text-lg font-bold">Projects</span>
+                </div>
+            </a>
+            <a href="{% url 'blog' %}" class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-teal-300 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition">
+                    <span class="text-lg font-bold">Blog</span>
+                </div>
+            </a>
+            <a href="{% url 'social_link' %}" class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-gray-300 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition">
+                    <span class="text-lg font-bold">Social</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+{% endblock %}

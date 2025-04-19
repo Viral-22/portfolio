@@ -1,0 +1,35 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}Resume & Certificates{% endblock %}
+
+{% block content %}
+<div class="container mx-auto text-center px-4">
+    <h1 class="text-2xl sm:text-4xl font-extrabold mb-6 text-gray-900">My Resume & Certificates</h1>
+
+    <!-- Resume Section -->
+    <div class="bg-[#FFFDD0] text-black p-6 mb-8 fade-in card-animation rounded-lg shadow-lg w-full max-w-3xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-semibold mb-4">Resume</h2>
+        <a href="{{ resume.file.url }}" target="_blank"
+           class="inline-block bg-blue-500 text-white font-bold px-6 py-3 rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:rounded-full">
+            <i class="fas fa-file-alt"></i> View Resume
+        </a>
+    </div>
+
+    <!-- Certificates Section -->
+    <h2 class="text-2xl sm:text-3xl font-semibold mt-6 mb-4 text-gray-900">Certificates</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+        {% for certificate in certificates %}
+            <div class="bg-[#FFFDD0] text-black p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 fade-in">
+                <h3 class="text-xl font-semibold mb-2">{{ certificate.title }}</h3>
+                <p class="mb-4 text-gray-700">Click below to view certificate.</p>
+                <a href="{{ certificate.file.url }}" target="_blank"
+                   class="inline-block bg-blue-500 text-white font-bold px-4 py-2 rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-600 hover:rounded-full">
+                    <i class="fas fa-certificate"></i> View Certificate
+                </a>
+            </div>
+        {% empty %}
+            <p class="text-red-500 col-span-full text-center">No certificates uploaded yet.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
