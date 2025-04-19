@@ -26,7 +26,7 @@ import os
 #SECRET_KEY = 'django-insecure-^@(q(677@)(r@j7vrt8q(*x2s^89y%fjc05ul4v&8d-4^62p0n'
 #ALLOWED_HOSTS = []
 
-DEBUG=False
+DEBUG=True
 SECRET_KEY='django-insecure-^@(q(677@)(r@j7vrt8q(*x2s^89y%fjc05ul4v&8d-4^62p0n'
 ALLOWED_HOSTS=["*"]
 SECURE_SSL_REDIRECT=False
@@ -155,11 +155,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import os
-
 # Media settings (Ensure MEDIA_ROOT is set correctly)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 
 # CKEditor upload path (Relative to MEDIA_ROOT)
 CKEDITOR_UPLOAD_PATH = "uploads_app/"
