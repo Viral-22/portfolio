@@ -142,10 +142,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Custom static files (e.g., your CSS, JS)
+    os.path.join(BASE_DIR, 'portfolio_project/staticfiles'),
 ]
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Where collectstatic will store the final files
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # Where collectstatic will store the final files
  # Or any other path you'd like
 
 # WhiteNoise setting to compress and serve static files efficiently
