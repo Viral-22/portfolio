@@ -25,15 +25,20 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ContactForm
 
+
 def social(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Your message has been successfully submitted.')
-            return redirect('social_link')  # Redirect back to the contact page
+            return redirect('social_link')
         else:
             messages.error(request, 'There was an error with your submission. Please check the form and try again.')
     else:
         form = ContactForm()
-    return render(request, 'portfolio/social.html', {'form': form, 'current_page': 'social'})
+
+    return render(request, 'portfolio/social.html', {
+        'form': form,
+        'current_page': 'social'
+    })
